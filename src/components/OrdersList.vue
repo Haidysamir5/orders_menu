@@ -19,7 +19,7 @@
 </template>
 
 <script>
-// import { mapState, mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 import OrderItem from "./OrderItem.vue";
 import OrderInfo from "./OrderInfo.vue";
@@ -28,15 +28,12 @@ export default {
   name: "orders-list",
   components: { OrderItem, OrderInfo },
   computed: {
-    orders() {
-      return this.$store.state.orders; //get orders from store
-    },
-    user() {
-      return this.$store.state.user; //get user from state
-    },
-    restaurant() {
-      return this.$store.state.restaurant; //get resturant info from state
-    },
+    ...mapState([
+      // map this.orders to store.state.orders
+      "orders",
+      "user",
+      "restaurant",
+    ]),
   },
   mounted() {
     this.$store.dispatch("fetchOrders"); //dispatch fetchorders to call get api
