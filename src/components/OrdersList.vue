@@ -29,17 +29,17 @@ export default {
   components: { OrderItem, OrderInfo },
   computed: {
     orders() {
-      return this.$store.state.orders;
+      return this.$store.state.orders; //get orders from store
     },
     user() {
-      return this.$store.state.user;
+      return this.$store.state.user; //get user from state
     },
     restaurant() {
-      return this.$store.state.restaurant;
+      return this.$store.state.restaurant; //get resturant info from state
     },
   },
   mounted() {
-    this.$store.dispatch("fetchOrders");
+    this.$store.dispatch("fetchOrders"); //dispatch fetchorders to call get api
   },
 };
 </script>

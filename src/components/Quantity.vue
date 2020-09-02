@@ -23,10 +23,10 @@ export default {
   name: "quantity",
   methods: {
     quantityInc: function (id) {
-      this.$store.dispatch("quantityInc", id);
+      this.$store.dispatch("quantityInc", id); //dispatch quantityInc 
     },
     quantityDec: function (id) {
-      this.$store.dispatch("quantityDec", id);
+      this.$store.dispatch("quantityDec", id); //dispatch quantityDec
     },
   },
 };
