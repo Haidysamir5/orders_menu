@@ -1,15 +1,15 @@
 <template>
   <div class="row mx-auto">
-    <div class="col-3"></div>
-    <div class="col-2 pr-0">
+    <div class="col-lg-3 d-md-block d-none "></div>
+    <div class="col-lg-2 col-md-3 col-4 pr-0 pl-md-3 pl-0">
       <div class="action-btn action-btn_left" data-order_id="id" @click="quantityDec(id)">
         <span>-</span>
       </div>
     </div>
-    <div class="col-2 pr-1 pl-1">
+    <div class="col-lg-2 col-md-3 col-4 pr-1 pl-1">
       <div class="cell-text">{{quantity}}</div>
     </div>
-    <div class="col-2 pl-0">
+    <div class="col-lg-2  col-md-3 col-4 pl-0 pr-md-3 pr-0">
       <div class="action-btn action-btn_right" data-order_id="id" @click="quantityInc(id)">
         <span>+</span>
       </div>
